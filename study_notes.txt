@@ -1,0 +1,57 @@
+## Source File Declaration Rules
+* There can be only one public class per source file.
+* A source file can have multiple non-public classes.
+* The public class name should be the name of the source file as well which should be appended by .java at the end. For example: the class name is public class Employee{} then the source file should be as Employee.java.
+* If the class is defined inside a package, then the package statement should be the first statement in the source file.
+* If import statements are present, then they must be written between the package statement and the class declaration. If there are no package statements, then the import statement should be the first line in the source file.
+* Import and package statements will imply to all the classes present in the source file. It is not possible to declare different import and/or package statements to different classes in the source file.
+
+## Object-Oriented features in Java
+* Polymorphism
+* Inheritance
+* Encapsulation
+* Abstraction
+* Classes
+* Objects
+* Instance
+* Method
+* Message Passing
+
+## Variable Types in a class
+Local variables − Variables defined inside methods, constructors or blocks are called local variables. The variable will be declared and initialized within the method and the variable will be destroyed when the method has completed.
+Instance variables − Instance variables are variables within a class but outside any method. These variables are initialized when the class is instantiated. Instance variables can be accessed from inside any method, constructor or blocks of that particular class.
+Class variables − Class variables are variables declared within a class, outside any method, with the static keyword.
+
+## Instance Variables
+* Instance variables are declared in a class, but outside a method, constructor or any block.
+* When a space is allocated for an object in the heap, a slot for each instance variable value is created.
+* Instance variables are created when an object is created with the use of the keyword 'new' and destroyed when the object is destroyed.
+* Instance variables hold values that must be referenced by more than one method, constructor or block, or essential parts of an object's state that must be present throughout the class.
+* Instance variables can be declared in class level before or after use.
+* Access modifiers can be given for instance variables.
+* The instance variables are visible for all methods, constructors and block in the class. Normally, it is recommended to make these variables private (access level). However, visibility for subclasses can be given for these variables with the use of access modifiers.
+* Instance variables have default values. For numbers, the default value is 0, for Booleans it is false, and for object references it is null. Values can be assigned during the declaration or within the constructor.
+* Instance variables can be accessed directly by calling the variable name inside the class. However, within static methods (when instance variables are given accessibility), they should be called using the fully qualified name. ObjectReference.VariableName.
+
+## Class/Static Variables
+* Class variables also known as static variables are declared with the static keyword in a class, but outside a method, constructor or a block.
+* There would only be one copy of each class variable per class, regardless of how many objects are created from it.
+* Static variables are rarely used other than being declared as constants. Constants are variables that are declared as public/private, final, and static. Constant variables never change from their initial value.
+* Static variables are stored in the static memory. It is rare to use static variables other than declared final and used as either public or private constants.
+* Static variables are created when the program starts and destroyed when the program stops.
+* Visibility is similar to instance variables. However, most static variables are declared public since they must be available for users of the class.
+* Default values are same as instance variables. For numbers, the default value is 0; for Booleans, it is false; and for object references, it is null. Values can be assigned during the declaration or within the constructor. Additionally, values can be assigned in special static initializer blocks.
+* Static variables can be accessed by calling with the class name ClassName.VariableName.
+* When declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
+
+## Modifiers
+### Access Control Modifiers
+* Visible to the package, the default. No modifiers are needed.
+* Visible to the class only (private).
+* Visible to the world (public).
+* Visible to the package and all subclasses (protected).
+### Non-Access Modifiers
+* The static modifier for creating class methods and variables.
+* The final modifier for finalizing the implementations of classes, methods, and variables.
+* The abstract modifier for creating abstract classes and methods.
+* The synchronized and volatile modifiers, which are used for threads.
